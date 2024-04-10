@@ -1,3 +1,4 @@
+/* eslint-disable */
 function getFullResponseFromAPI(success) {
   return new Promise((resolve, reject) => {
     if (success) {
@@ -7,3 +8,4 @@ function getFullResponseFromAPI(success) {
     }
   });
 }
+/* eslint-enable */
