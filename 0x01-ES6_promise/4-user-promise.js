@@ -1,9 +1,9 @@
 export default function signUpUser(firstName, lastName) {
   return new Promise()
-    .then((data) => (
+    .then(() => (
       {
-        firstName: data.firstName,
-        lastName: data.lastName,
+        "firstName": firstName,
+        "lastName": lastName,
       }
     ));
 }
