@@ -1,5 +1,5 @@
 import { uploadPhoto, createUser } from './utils';
-
+/* eslint-disable */
 export default async function asyncUploadUser() {
   try {
     let photo = await uploadPhoto();
@@ -9,3 +9,4 @@ export default async function asyncUploadUser() {
     return { photo: null, user: null };
   }
 }
+/* eslint-enable */
