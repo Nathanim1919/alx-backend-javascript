@@ -9,5 +9,3 @@ export default function getFullResponseFromAPI(success) {
   });
 }
 /* eslint-enable */
-
-getFullResponseFromAPI(false)
