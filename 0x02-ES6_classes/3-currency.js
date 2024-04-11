@@ -1,5 +1,5 @@
-export default class Currency {
-  Currency(code, name) {
+class Currency {
+  constructor(code, name) {
     this._code = code;
     this._name = name;
   }
@@ -24,3 +24,7 @@ export default class Currency {
     return `${this._name} (${this._code})`;
   }
 }
+
+
+const dollar = new Currency('USD', 'Dollars');
+console.log(dollar.displayFullCurrency()); // undefiend (undefined)
