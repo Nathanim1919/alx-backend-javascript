@@ -24,7 +24,3 @@ class Currency {
     return `${this._name} (${this._code})`;
   }
 }
-
-
-const dollar = new Currency('USD', 'Dollars');
-console.log(dollar.displayFullCurrency()); // undefiend (undefined)
