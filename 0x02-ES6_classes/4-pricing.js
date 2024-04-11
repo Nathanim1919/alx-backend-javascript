@@ -1,4 +1,4 @@
-import Currency from './3-currency';
+import Currency from './3-currency.js';
 
 class Pricing {
   constructor(amount, currency) {
@@ -55,8 +55,3 @@ class Pricing {
     return amount * conversionRate;
   }
 }
-
-// export default Pricing;
-
-const p = new Pricing(100, new Currency("EUR", "Euro"))
-console.log(p.displayFullPrice())
