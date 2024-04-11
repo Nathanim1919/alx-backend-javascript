@@ -1,4 +1,4 @@
-import Currency from "./3-currency";
+import Currency from './3-currency';
 
 export default class Pricing {
   Pricing(amount, currency) {
@@ -23,6 +23,6 @@ export default class Pricing {
   }
 
   displayFullPrice() {
-    return `${this._amount} ${this._currency.displayFullCurrency()}`
+    return `${this._amount} ${this._currency.displayFullCurrency()}`;
   }
 }
