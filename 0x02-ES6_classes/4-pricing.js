@@ -1,9 +1,9 @@
-import Currency from './3-currency';
+import Currency from './3-currency.js';
 
 class Pricing {
   constructor(amount, currency) {
-    this.amount = amount;
-    this.currency = currency;
+    this._amount = amount;
+    this._currency = currency;
   }
 
   /**
@@ -56,4 +56,7 @@ class Pricing {
   }
 }
 
-export default Pricing;
+// export default Pricing;
+
+const p = new Pricing(100, new Currency("EUR", "Euro"))
+console.log(p.displayFullPrice())
