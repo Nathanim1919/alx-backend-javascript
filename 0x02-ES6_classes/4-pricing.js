@@ -27,18 +27,18 @@ export default class Pricing {
   }
 
   /**
-   * 
-   * @param {number} amount 
-   * @param {number} conversionRate 
+   *
+   * @param {number} amount
+   * @param {number} conversionRate
    * @returns number
    */
   static convertPrice(amount, conversionRate) {
     if (typeof amount !== 'number') {
-        throw new TypeError('amount must be a number')
+      throw new TypeError('amount must be a number');
     }
 
     if (typeof conversionRate !== 'number') {
-        throw new TypeError('conversionRate must be a number')
+      throw new TypeError('conversionRate must be a number');
     }
 
     return amount * conversionRate;
