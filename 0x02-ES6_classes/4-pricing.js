@@ -55,3 +55,5 @@ class Pricing {
     return amount * conversionRate;
   }
 }
+
+export default Pricing;
