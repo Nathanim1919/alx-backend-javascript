@@ -1,12 +1,18 @@
-export class Java extends Subjects.Subject{
-    getRequirements(): string {
-        return 'Here is the list of requirements for Java';
+namespace Subjects {
+    export interface Teacher {
+        experienceTeachingJava?: number;
     }
 
-    getAvailableTeacher(): string {
-        if (this.teacher.experienceTeachingJava === undefined) {
-            return 'No available teacher';
+    export class Java extends Subjects.Subject {
+        getRequirements(): string {
+            return 'Here is the list of requirements for Java';
         }
-        return 'Available Teacher: ' + this.teacher.firstName;
+
+        getAvailableTeacher(): string {
+            if (!this.teacher || this.teacher.experienceTeachingJava <= 0) {
+                return 'No available teacher';
+            }
+            return `Available Teacher: ${this.teacher.firstName}`;
+        }
     }
 }

@@ -1,12 +1,18 @@
-export class React extends Subjects.Subject{
-    getRequirements(): string {
-        return 'Here is the list of requirements for React';
+namespace Subjects {
+    export interface Teacher {
+        experienceTeachingReact?: number;
     }
 
-    getAvailableTeacher(): string {
-        if (this.teacher.experienceTeachingReact === undefined) {
-            return 'No available teacher';
+    export class React extends Subjects.Subject {
+        getRequirements(): string {
+            return 'Here is the list of requirements for React';
         }
-        return 'Available Teacher: ' + this.teacher.firstName;
+
+        getAvailableTeacher(): string {
+            if (!this.teacher || this.teacher.experienceTeachingReact <= 0) {
+                return 'No available teacher';
+            }
+            return `Available Teacher: ${this.teacher.firstName}`;
+        }
     }
 }

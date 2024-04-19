@@ -1,12 +1,19 @@
-export class Cpp extends Subjects.Subject {
-    getRequirements(): string {
-        return 'Here is the list of requirements for Cpp';
+namespace Subjects {
+    export interface Teacher {
+        experienceTeachingC?: number;
     }
 
-    getAvailableTeacher(): string {
-        if (this.teacher.experienceTeachingC === undefined) {
-            return 'No available teacher';
+
+    export class Cpp extends Subjects.Subject {
+        getRequirements(): string {
+            return 'Here is the list of requirements for Cpp';
         }
-        return 'Available Teacher: ' + this.teacher.firstName;
+
+        getAvailableTeacher(): string {
+            if (!this.teacher || this.teacher.experienceTeachingC <= 0) {
+                return 'No available teacher';
+            }
+            return 'Available Teacher: ' + this.teacher.firstName;
+        }
     }
 }
