@@ -1,4 +1,6 @@
-namespace Subjects {
+// import { Teacher } from './Teacher';
+
+export namespace Subjects {
     export class Subject {
         teacher: Teacher;
 
