@@ -9,7 +9,7 @@
 const assert = require('assert');
 const calculateNumber = require('./0-calcul');
 
-describe('add', function() {
+describe('calculateNumber', function() {
     it('should return 5', function() {
         assert.strictEqual( calculateNumber(1, 3.7), 5);
     });
