@@ -8,11 +8,11 @@ describe('getPaymentTokenFromAPI', () => {
         expect(response).to.eql({ data: 'Successful response from the API' });
         done();
       })
-      .catch(done); // Simplified error handling
+      .catch(done);
   });
 
   it('should return undefined if success is false', () => {
     const res = getPaymentTokenFromAPI(false);
-    expect(res).to.be.undefined; // More precise assertion
+    expect(res).to.be.undefined;
   });
 });
